@@ -1,0 +1,20 @@
+  <div class="jumbotron" style="background-color: #fff; height: calc(95vh);">
+    <h1 class="text-center">Dave Bot Team Picker Alpha</h1>
+    <p class="lead text-center">
+      Click the button below to provide you with the team most likely to score and concede this week.
+    </p>
+    <a class="btn btn-lg btn-primary btn-block" (click)="teamSelectorAlgorithm()" role="button">Run Dave Bot</a>
+    <div class="card text-center" *ngIf="computedTeam">
+      <div class="card-header">Dave Bot's Recommendation</div>
+      <div class="card-block">
+        <h4 class="card-title">{{computedTeam.name}}</h4>
+        <p class="card-text">
+          {{computedTeam.description}}
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+
+
